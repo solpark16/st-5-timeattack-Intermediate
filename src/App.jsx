@@ -7,10 +7,14 @@ function App() {
   const { count } = useSelector((state) => state.calculator);
   const [number, setNumber] = useState(0);
   const dispatch = useDispatch();
+
+  // 더하기 핸들러
   const addCountHandler = () => {
     dispatch(addCount(number));
     setNumber(0);
   };
+
+  // 빼기 핸들러
   const removeCountHandler = () => {
     dispatch(removeCount(number));
     setNumber(0);
